@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visit_bookings",
+  "info": {
+    "singularName": "visit-booking",
+    "pluralName": "visit-bookings",
+    "displayName": "VisitBooking",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "startTime": {
+      "type": "datetime"
+    },
+    "endTime": {
+      "type": "datetime"
+    },
+    "visitorsCount": {
+      "type": "integer"
+    },
+    "bookingCode": {
+      "type": "uid"
+    },
+    "bookingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "cancelled"
+      ]
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_main_feature_cards",
+  "info": {
+    "displayName": "Feature Card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}
