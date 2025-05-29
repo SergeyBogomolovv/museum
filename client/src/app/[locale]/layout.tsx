@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 type Props = {
   children: React.ReactNode
   params: Promise<{
-    locale: string
+    locale: 'en' | 'ru'
   }>
 }
 

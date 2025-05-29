@@ -17,9 +17,6 @@
     "startTime": {
       "type": "datetime"
     },
-    "endTime": {
-      "type": "datetime"
-    },
     "visitorsCount": {
       "type": "integer"
     },
@@ -32,10 +29,14 @@
         "pending",
         "confirmed",
         "cancelled"
-      ]
+      ],
+      "default": "pending"
     },
     "name": {
       "type": "string"
+    },
+    "wishes": {
+      "type": "text"
     }
   }
 }

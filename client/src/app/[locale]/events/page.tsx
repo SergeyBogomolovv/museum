@@ -4,7 +4,7 @@ import { EventsResponseSchema } from '@/shared/schemas'
 
 type Props = {
   params: Promise<{
-    locale: string
+    locale: 'en' | 'ru'
   }>
 }
 

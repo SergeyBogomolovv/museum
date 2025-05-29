@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 
 type Props = {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: 'en' | 'ru' }>
 }
 
 export default async function Home({ params }: Props) {

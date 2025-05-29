@@ -21,3 +21,7 @@ body {
   font-family: Georgia, serif;
   @apply tracking-wide;
 }
+
+.input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition;
+}

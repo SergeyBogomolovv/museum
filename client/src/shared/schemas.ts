@@ -124,3 +124,15 @@ const EventSchema = z.object({
 export const EventsResponseSchema = z.object({
   data: z.array(EventSchema),
 })
+
+// BookVisitPage
+export const BookVisitPageResponseSchema = z.object({
+  data: z.object({
+    id: z.number(),
+    title: z.string(),
+    description: z.string(),
+    image: MediaSchema,
+    maxVisitorsCount: z.number(),
+    formTitle: z.string(),
+  }),
+})

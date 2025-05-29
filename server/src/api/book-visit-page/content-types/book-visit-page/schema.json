@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "book_visit_pages",
+  "info": {
+    "singularName": "book-visit-page",
+    "pluralName": "book-visit-pages",
+    "displayName": "Book Visit Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "maxVisitorsCount": {
+      "type": "integer"
+    },
+    "formTitle": {
+      "type": "string"
+    }
+  }
+}

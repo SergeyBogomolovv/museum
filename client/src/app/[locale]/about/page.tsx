@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 type Props = {
   params: Promise<{
-    locale: string
+    locale: 'en' | 'ru'
   }>
 }
 

@@ -1,4 +1,4 @@
 'use client'
 export default function ErrorPage() {
-  return <main>Произошла ошибка</main>
+  return <main>Произошла техническая шоколадка</main>
 }
