@@ -593,6 +593,10 @@ export interface ApiVisitBookingVisitBooking
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
+    isAdminEmailSent: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    isUserEmailSent: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -601,6 +605,7 @@ export interface ApiVisitBookingVisitBooking
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    rejectReason: Schema.Attribute.Text;
     startTime: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

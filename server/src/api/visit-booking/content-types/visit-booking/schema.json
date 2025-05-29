@@ -37,6 +37,17 @@
     },
     "wishes": {
       "type": "text"
+    },
+    "rejectReason": {
+      "type": "text"
+    },
+    "isAdminEmailSent": {
+      "type": "boolean",
+      "default": false
+    },
+    "isUserEmailSent": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

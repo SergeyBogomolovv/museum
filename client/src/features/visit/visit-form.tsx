@@ -14,6 +14,7 @@ type Props = {
 
 export default function VisitForm({ maxVisitorsCount, locale }: Props) {
   const [isSubmited, setIsSubmited] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
 
   const t = translations[locale]
@@ -37,18 +38,28 @@ export default function VisitForm({ maxVisitorsCount, locale }: Props) {
         wishes: data.wishes,
       },
     }
-    const res = await fetch(`${API_URL}/api/visit-bookings`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    })
-    if (!res.ok) {
+    setIsLoading(true)
+    setIsError(false)
+    setIsSubmited(false)
+    try {
+      const res = await fetch(`${API_URL}/api/visit-bookings`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+      setIsLoading(false)
+      if (!res.ok) {
+        setIsError(true)
+        return
+      }
+      setIsSubmited(true)
+    } catch (err) {
+      console.error(err)
+      setIsLoading(false)
       setIsError(true)
-      return
     }
-    setIsSubmited(true)
   }
 
   return (
@@ -107,10 +118,11 @@ export default function VisitForm({ maxVisitorsCount, locale }: Props) {
       </div>
 
       <button
+        disabled={isLoading}
         type='submit'
         className='w-full bg-secondary py-2 rounded-md hover:bg-orange-700 transition font-bold cursor-pointer text-white'
       >
-        {t.submit}
+        {isLoading ? t.loading : t.submit}
       </button>
       {isSubmited && (
         <div className='text-green-800 px-4 py-2 rounded-md text-center mt-1 bg-green-400/40'>

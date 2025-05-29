@@ -20,6 +20,7 @@ export const translations = {
 
     success: 'Ваша заявка отправлена',
     error: 'Что-то пошло не так',
+    loading: 'Загрузка...',
 
     submit: 'Отправить заявку',
     validation: {
@@ -54,6 +55,7 @@ export const translations = {
     wishesPlaceholder: 'Wishes',
 
     success: 'Your request has been sent',
+    loading: 'Loading...',
     error: 'Something went wrong',
 
     submit: 'Submit request',

@@ -44,19 +44,19 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
-      <section className='bg-primary p-8 md:p-16 w-full'>
+      <section className='bg-primary p-4 md:p-16 w-full'>
         <div className='flex flex-col md:flex-row container m-auto justify-center items-center md:items-stretch divide-y md:divide-y-0 md:divide-x divide-white'>
           {details.map((detail) => (
             <div key={detail.id} className='flex flex-1 p-8'>
               <div className='flex flex-col md:flex-row items-center justify-center w-full gap-4'>
                 <Image
-                  className='size-32 md:mr-4'
+                  className='size-16 lg:size-32 md:mr-4'
                   src={API_URL + detail.icon.url}
                   alt={detail.icon.alternativeText ?? ''}
                   width={144}
                   height={144}
                 />
-                <div className='text-center md:text-left text-2xl'>
+                <div className='text-center md:text-left text-xl lg:text-2xl'>
                   <h3 className='font-semibold mb-4'>{detail.title}</h3>
                   <p className='whitespace-pre-wrap'>{detail.description}</p>
                 </div>

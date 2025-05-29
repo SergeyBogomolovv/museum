@@ -1,14 +1,7 @@
-import type { Metadata } from 'next'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { API_URL } from '@/shared/contstants'
-import '../globals.css'
 import { FooterResponseSchema, HeaderResponseSchema } from '@/shared/schemas'
-
-export const metadata: Metadata = {
-  title: 'Museum',
-  description: 'Museum description',
-}
 
 type Props = {
   children: React.ReactNode
@@ -17,7 +10,7 @@ type Props = {
   }>
 }
 
-export default async function RootLayout({ children, params }: Props) {
+export default async function Layout({ children, params }: Props) {
   const { locale } = await params
   const headerData = await getHeaderData(locale)
   const footerData = await getFooterData(locale)

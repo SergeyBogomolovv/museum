@@ -4,10 +4,10 @@ import { z } from 'zod'
 
 export default function Footer({ data }: z.infer<typeof FooterResponseSchema>) {
   return (
-    <footer className='bg-primary p-8 md:p-16'>
+    <footer className='bg-primary p-4 md:p-16'>
       <div className='container m-auto flex flex-col md:flex-row justify-between items-center md:items-start'>
         {data.sections.map((section) => (
-          <div key={section.id} className='flex p-4'>
+          <div key={section.id} className='flex p-2 md:p-4'>
             <div className='flex flex-col md:flex-col items-center md:items-start text-center md:text-left gap-2 w-full'>
               <h3 className='font-semibold text-lg mb-2'>{section.title}</h3>
               {section.description?.split('\n').map((text) => (

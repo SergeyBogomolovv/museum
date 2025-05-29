@@ -39,6 +39,5 @@ export default async function BookVisitPage({ params }: Props) {
 async function fetchBookVisitPageData(locale: string) {
   const res = await fetch(`${API_URL}/api/book-visit-page?populate=image&locale=${locale}`)
   const result = await res.json()
-  console.log(result)
   return BookVisitPageResponseSchema.parse(result).data
 }
