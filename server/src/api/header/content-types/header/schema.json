@@ -16,13 +16,22 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "links": {
-      "displayName": "Link",
       "type": "component",
-      "repeatable": true,
-      "component": "shared.link"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.link",
+      "repeatable": true
     }
   }
 }

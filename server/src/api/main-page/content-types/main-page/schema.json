@@ -18,20 +18,33 @@
   "attributes": {
     "features": {
       "type": "component",
-      "repeatable": true,
-      "component": "main.feature-card"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "main.feature-card",
+      "repeatable": true
     },
     "hero": {
-      "displayName": "Hero",
       "type": "component",
-      "repeatable": false,
-      "component": "main.hero"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "main.hero",
+      "repeatable": false
     },
     "details": {
-      "displayName": "Details",
       "type": "component",
-      "repeatable": true,
-      "component": "main.details"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "main.details",
+      "repeatable": true
     }
   }
 }

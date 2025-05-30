@@ -17,10 +17,14 @@
   },
   "attributes": {
     "sections": {
-      "displayName": "Footer Section",
       "type": "component",
-      "repeatable": true,
-      "component": "layout.footer-section"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "layout.footer-section",
+      "repeatable": true
     }
   }
 }

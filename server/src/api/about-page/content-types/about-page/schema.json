@@ -18,16 +18,25 @@
   "attributes": {
     "content": {
       "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "components": [
         "about.image",
         "about.text"
       ]
     },
     "hero": {
-      "displayName": "Hero",
       "type": "component",
-      "repeatable": false,
-      "component": "about.hero"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "about.hero",
+      "repeatable": false
     }
   }
 }
