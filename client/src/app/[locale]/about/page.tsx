@@ -35,7 +35,7 @@ export default async function About({ params }: Props) {
             case 'about.image':
               return (
                 <Image
-                  key={block.id}
+                  key={block.image.id}
                   src={API_URL + block.image.url}
                   alt={block.image.alternativeText ?? ''}
                   width={block.image.width ?? 400}
