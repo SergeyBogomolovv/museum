@@ -69,7 +69,7 @@ export default async function Home({ params }: Props) {
       <section className='flex flex-col gap-10 py-10 container'>
         {features.map((feature) => (
           <div key={feature.id} className='flex flex-col md:flex-row items-center gap-10'>
-            <div className='relative w-full h-[400px] md:h-[500px] flex items-center overflow-hidden'>
+            <div className='relative w-full min-h-[400px] md:min-h-[500px] flex items-center overflow-hidden p-2'>
               <Image
                 src={API_URL + feature.cover.url}
                 alt={feature.cover.alternativeText ?? ''}
