@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'admin.demidov-museum.ru',
-        port: '1337',
+        port: '',
         pathname: '/uploads/**',
         search: '',
       },
