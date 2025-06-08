@@ -14,7 +14,7 @@ export default async function Home({ params }: Props) {
 
   return (
     <main className='flex-1 flex flex-col items-center'>
-      <section className='relative w-full lg:aspect-[16/6] md:aspect-video aspect-square'>
+      <section className='relative w-full lg:aspect-[16/6] md:aspect-video aspect-auto'>
         <div className='absolute inset-0 z-0'>
           <Image
             src={API_URL + hero.cover.url}
